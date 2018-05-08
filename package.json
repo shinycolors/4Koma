@@ -5,6 +5,7 @@
   "author": "MPThLee <mpthlee@gmail.com>",
   "private": true,
   "scripts": {
+    "deploy": "push-dir --dir=dist --branch=gh-pages --cleanup",
     "dev": "nuxt",
     "build": "nuxt build",
     "start": "nuxt start",
@@ -27,6 +28,7 @@
     "eslint-plugin-vue": "^4.0.0",
     "node-sass": "^4.9.0",
     "nuxt-class-component": "^1.2.1",
+    "push-dir": "^0.4.1",
     "sass-loader": "^7.0.1",
     "ts-loader": "^3.5.0",
     "typescript": "^2.8.3"
