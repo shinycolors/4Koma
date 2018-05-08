@@ -35,7 +35,7 @@ import Component from "nuxt-class-component";
 import Route from "vue-router";
 import axios from "axios";
 
-function sleep(ms) {
+function sleep(ms): Promise<void> {
   return new Promise(resolve => setTimeout(resolve, ms));
 }
 
@@ -78,11 +78,11 @@ export default class extends Vue {
       });
   }
 
-  tabSelect(item, { route }) {
+  tabSelect(item, { route }): void {
     this.$router.replace({ query: { ep: item.id } });
   }
 
-  langName(obj) {
+  langName(obj): string {
     console.log(obj);
     let name = Object.keys(obj)[0];
     switch (name) {
@@ -90,19 +90,21 @@ export default class extends Vue {
         return "Japanese";
       case "en":
         return "English";
+      default:
+        return ""
     }
   }
 
-  mounted() {
+  mounted(): void {
     this.syncTab();
   }
 
-  syncTab() {
+  syncTab(): void {
     this.selectTab(this.$route);
   }
 
-  async selectTab({ query }): Promise<any | null> {
-    if (typeof query.ep === "undefined") return null;
+  async selectTab({ query }): Promise<void> {
+    if (typeof query.ep === "undefined") return void(0);
     while (true) {
       if (!this.isLoaded) {
         await sleep(100);
@@ -114,7 +116,7 @@ export default class extends Vue {
     }
   }
 
-  tabSelector(id: number) {
+  tabSelector(id: number): void {
     for (var i of this.items) {
       i._rowVariant = "";
     }
