@@ -1,0 +1,34 @@
+{
+  "name": "4koma.shinycolors",
+  "version": "0.1.0",
+  "description": "Infomally ShinyColors 4Koma site",
+  "author": "MPThLee <mpthlee@gmail.com>",
+  "private": true,
+  "scripts": {
+    "dev": "nuxt",
+    "build": "nuxt build",
+    "start": "nuxt start",
+    "generate": "nuxt generate",
+    "lint": "eslint --ext .js,.vue --ignore-path .gitignore .",
+    "precommit": "npm run lint"
+  },
+  "dependencies": {
+    "axios": "^0.18.0",
+    "bootstrap-vue": "^2.0.0-rc.9",
+    "nuxt": "^1.4.0",
+    "nuxt-property-decorator": "^1.2.0"
+  },
+  "devDependencies": {
+    "@types/node": "^10.0.4",
+    "babel-eslint": "^8.2.1",
+    "eslint": "^4.15.0",
+    "eslint-friendly-formatter": "^3.0.0",
+    "eslint-loader": "^1.7.1",
+    "eslint-plugin-vue": "^4.0.0",
+    "node-sass": "^4.9.0",
+    "nuxt-class-component": "^1.2.1",
+    "sass-loader": "^7.0.1",
+    "ts-loader": "^3.5.0",
+    "typescript": "^2.8.3"
+  }
+}
