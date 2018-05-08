@@ -91,7 +91,7 @@ export default class extends Vue {
       case "en":
         return "English";
       default:
-        return ""
+        return "";
     }
   }
 
@@ -104,7 +104,7 @@ export default class extends Vue {
   }
 
   async selectTab({ query }): Promise<void> {
-    if (typeof query.ep === "undefined") return void(0);
+    if (typeof query.ep === "undefined") return void 0;
     while (true) {
       if (!this.isLoaded) {
         await sleep(100);

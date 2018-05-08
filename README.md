@@ -1,6 +1,6 @@
 # 4koma.shinycolors
 
-> Infomally ShinyColors 4Koma site
+> Informally ShinyColors 4Koma site
 
 ## Build Setup
 

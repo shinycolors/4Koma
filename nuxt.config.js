@@ -10,7 +10,7 @@ module.exports = {
       {
         hid: "description",
         name: "description",
-        content: "Infomally ShinyColors 4Koma site"
+        content: "Informally ShinyColors 4Koma site"
       }
     ],
     link: [
