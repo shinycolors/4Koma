@@ -6,22 +6,22 @@ module.exports = function(options) {
   this.extendBuild(config => {
     config.module.rules.push({
       enforce: "pre",
-      test: /\.tsx?$/,
-      loader: "tslint-loader",
       exclude: /(node_modules)/,
+      loader: "tslint-loader",
       options: {
-        tsConfigFile: "tsconfig.json",
-        configFile: "tslint.json"
-      }
+        configFile: "tslint.json",
+        tsConfigFile: "tsconfig.json"
+      },
+      test: /\.tsx?$/,
     });
     // Add TypeScript loader
     config.module.rules.push({
-      test: /((client|server)\.js)|(\.tsx?)$/,
       loader: "ts-loader",
       options: {
-        configFile: "tsconfig.json",
-        appendTsSuffixTo: [/\.vue$/]
-      }
+        appendTsSuffixTo: [/\.vue$/],
+        configFile: "tsconfig.json"
+      },
+      test: /((client|server)\.js)|\.tsx?$/
     });
     // Add TypeScript loader for vue files
     for (let rule of config.module.rules) {

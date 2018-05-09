@@ -4230,13 +4230,6 @@ number-is-nan@^1.0.0:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/number-is-nan/-/number-is-nan-1.0.1.tgz#097b602b53422a522c1afb8790318336941a011d"
 
-nuxt-class-component@^1.2.1:
-  version "1.2.1"
-  resolved "https://registry.yarnpkg.com/nuxt-class-component/-/nuxt-class-component-1.2.1.tgz#2a079576298a8dfe1ea1ab47b9fc1fc9de2eb5d4"
-  dependencies:
-    vue-class-component "^6.2.0"
-    vuex-class "^0.3.0"
-
 nuxt-property-decorator@^1.2.0:
   version "1.2.0"
   resolved "https://registry.yarnpkg.com/nuxt-property-decorator/-/nuxt-property-decorator-1.2.0.tgz#bdc0ed858ab2b0d70ca9b59ba56a910ff6314144"
@@ -6628,7 +6621,7 @@ void-elements@^3.1.0:
   version "3.1.0"
   resolved "https://registry.yarnpkg.com/void-elements/-/void-elements-3.1.0.tgz#614f7fbf8d801f0bb5f0661f5b2f5785750e4f09"
 
-vue-class-component@^6.0.2, vue-class-component@^6.2.0:
+vue-class-component@^6.0.2:
   version "6.2.0"
   resolved "https://registry.yarnpkg.com/vue-class-component/-/vue-class-component-6.2.0.tgz#7adb1daa9a868c75f30f97f33f4f1b94aee62089"
 
@@ -6715,10 +6708,6 @@ vue-template-es2015-compiler@^1.6.0:
 vue@^2.5.13:
   version "2.5.16"
   resolved "https://registry.yarnpkg.com/vue/-/vue-2.5.16.tgz#07edb75e8412aaeed871ebafa99f4672584a0085"
-
-vuex-class@^0.3.0:
-  version "0.3.0"
-  resolved "https://registry.yarnpkg.com/vuex-class/-/vuex-class-0.3.0.tgz#25047ab042580fd4ff3e64cc76603ac217c9190d"
 
 vuex@^3.0.1:
   version "3.0.1"

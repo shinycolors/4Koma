@@ -30,41 +30,29 @@
 </template>
 
 <script lang="ts">
-import Vue from "vue";
-import Component from "nuxt-class-component";
-import Route from "vue-router";
 import axios from "axios";
+import { Component, Provide, Vue, Watch } from "nuxt-property-decorator";
+import Route from "vue-router";
 
 function sleep(ms): Promise<void> {
   return new Promise(resolve => setTimeout(resolve, ms));
 }
 
-@Component({
-  watch: {
-    $route: "syncTab"
-  }
-})
+@Component
 export default class extends Vue {
-  isLoaded: boolean = false;
-  isBusy: boolean;
-  items: any[];
-  tabItem: any[];
+  @Provide()
+  public fields: object[] = [{ key: "id", label: "Episode", sortable: true }];
+  @Provide() public isBusy: boolean = false;
+  @Provide() public items: any[] = [];
+  @Provide() public sortBy: string = "id";
+  @Provide() public tabItem: any[] = [];
+  @Provide() protected isLoaded: boolean = false;
 
-  data() {
-    return {
-      isLoaded: false,
-      isBusy: false,
-      fields: [{ key: "id", label: "Episode", sortable: true }],
-      sortBy: "id",
-      tabItem: []
-    };
-  }
-
-  provider(ctx): Promise<object[]> {
+  public provider(ctx): Promise<object[]> {
     this.isBusy = true;
-    let promise = axios.get(`/data/data.json`);
 
-    return promise
+    return axios
+      .get(`/data/data.json`)
       .then(data => {
         const items: object[] = data.data.data;
         this.isBusy = false;
@@ -78,14 +66,12 @@ export default class extends Vue {
       });
   }
 
-  tabSelect(item, { route }): void {
+  public tabSelect(item, { route }): void {
     this.$router.replace({ query: { ep: item.id } });
   }
 
-  langName(obj): string {
-    console.log(obj);
-    let name = Object.keys(obj)[0];
-    switch (name) {
+  public langName(obj): string {
+    switch (Object.keys(obj)[0]) {
       case "ja":
         return "Japanese";
       case "en":
@@ -95,33 +81,35 @@ export default class extends Vue {
     }
   }
 
-  mounted(): void {
-    this.syncTab();
-  }
-
-  syncTab(): void {
-    this.selectTab(this.$route);
-  }
-
-  async selectTab({ query }): Promise<void> {
-    if (typeof query.ep === "undefined") return void 0;
+  protected async selectTab({ query }): Promise<void> {
+    if (typeof query.ep === "undefined") {
+      return void 0;
+    }
     while (true) {
       if (!this.isLoaded) {
         await sleep(100);
         continue;
       }
-      let EpisodeID: number = Number(query.ep);
-      this.tabSelector(EpisodeID);
+      this.tabSelector(Number(query.ep));
       break;
     }
   }
 
-  tabSelector(id: number): void {
-    for (var i of this.items) {
+  protected mounted() {
+    this.onRouteChanges();
+  }
+
+  protected tabSelector(id: number): void {
+    for (const i of this.items) {
       i._rowVariant = "";
     }
     this.tabItem = this.items[id].lang;
     this.items[id]._rowVariant = "info";
+  }
+
+  @Watch("$route")
+  protected async onRouteChanges() {
+    this.selectTab(this.$route);
   }
 }
 </script>

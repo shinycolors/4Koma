@@ -8,13 +8,13 @@
 
 <script lang="ts">
 import Vue from "vue";
-import cNav from "~/components/Nav.vue";
 import cFooter from "~/components/Footer.vue";
+import cNav from "~/components/Nav.vue";
 
 export default Vue.extend({
   components: {
-    cNav,
-    cFooter
+    cFooter,
+    cNav
   }
 });
 </script>
