@@ -33,10 +33,7 @@
 import axios from "axios";
 import { Component, Provide, Vue, Watch } from "nuxt-property-decorator";
 import Route from "vue-router";
-
-function sleep(ms): Promise<void> {
-  return new Promise(resolve => setTimeout(resolve, ms));
-}
+import sleep from "~/utils/sleep.ts";
 
 @Component
 export default class extends Vue {

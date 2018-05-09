@@ -27,7 +27,7 @@ $ npm run generate
 
 This repository using TypeScript and Nuxt.js.
 [![TypeScript](https://img.shields.io/badge/TypeScript-v2.8-blue.svg?style=flat-square)](https://www.typescriptlang.org/)
-[![TypeScript](https://img.shields.io/badge/Nuxt-v1.4-41b883.svg?style=flat-square)](https://www.typescriptlang.org/)
+[![Nuxt](https://img.shields.io/badge/Nuxt-v1.4-41b883.svg?style=flat-square)](https://nuxtjs.org/)
 
 ### Dependencies Status
 [![dependencies Status](https://img.shields.io/david/shinycolors/4Koma.svg?style=flat-square)](https://david-dm.org/shinycolors/4Koma)
