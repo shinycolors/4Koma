@@ -1,4 +1,5 @@
 # 4koma.shinycolors
+[![Build Status](https://travis-ci.org/shinycolors/4Koma.svg?branch=master)](https://travis-ci.org/shinycolors/4Koma)
 
 > Informally ShinyColors 4Koma site
 
