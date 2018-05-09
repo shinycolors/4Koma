@@ -8,7 +8,7 @@
               <img v-bind:src="i.img_src" align="middle" style="width: 100%; height: auto;"
                 :hidden="typeof(i.img_src) === 'undefined' || i.img_src == ''">
               <br/>
-              <b-button :href="i.links" variant="outline-primary" block>Source</b-button>
+              <b-button :href="i.links" class="external-links" variant="outline-primary" block>Source</b-button>
             </b-tab>
             <div slot="empty" class="text-center text-muted">
               Please select episode.
@@ -33,10 +33,7 @@
 import axios from "axios";
 import { Component, Provide, Vue, Watch } from "nuxt-property-decorator";
 import Route from "vue-router";
-
-function sleep(ms): Promise<void> {
-  return new Promise(resolve => setTimeout(resolve, ms));
-}
+import sleep from "~/utils/sleep.ts";
 
 @Component
 export default class extends Vue {
