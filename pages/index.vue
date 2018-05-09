@@ -8,7 +8,7 @@
               <img v-bind:src="i.img_src" align="middle" style="width: 100%; height: auto;"
                 :hidden="typeof(i.img_src) === 'undefined' || i.img_src == ''">
               <br/>
-              <b-button :href="i.links" variant="outline-primary" block>Source</b-button>
+              <b-button :href="i.links" class="external-links" variant="outline-primary" block>Source</b-button>
             </b-tab>
             <div slot="empty" class="text-center text-muted">
               Please select episode.

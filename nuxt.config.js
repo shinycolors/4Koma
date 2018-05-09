@@ -18,9 +18,9 @@ module.exports = {
       {
         rel: "stylesheet",
         href:
-          "https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css",
+          "https://use.fontawesome.com/releases/v5.0.12/css/all.css",
         integrity:
-          "sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN",
+          "sha384-G0fIWCsCzJIMAVNQPfjH08cyYaUtMwjJwqiRKxxE/rx96Uroj1BtIQ6MLJuheaO9",
         crossorigin: "anonymous"
       }
     ]

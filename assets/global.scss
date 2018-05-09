@@ -15,12 +15,10 @@ body {
   /* line-height: 60px; */
 }
 
-a[href^="//"]:after,
-a[href^="http://"]:after,
-a[href^="https://"]:after {
-  content: "\f08e";
-  font-family: FontAwesome;
-  font-weight: normal;
+.external-links::after {
+  content: "\f35d";
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
   font-style: normal;
   display: inline-block;
   text-decoration: none;
