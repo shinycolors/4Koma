@@ -11,7 +11,8 @@
     "start": "nuxt start",
     "generate": "nuxt generate",
     "lint": "eslint --ext .js,.vue --ignore-path .gitignore .",
-    "precommit": "npm run lint"
+    "precommit": "npm run lint",
+    "test": "wotan"
   },
   "dependencies": {
     "axios": "^0.18.0",
@@ -20,6 +21,9 @@
     "nuxt-property-decorator": "^1.2.0"
   },
   "devDependencies": {
+    "@fimbul/valtyr": "^0.8.0",
+    "@fimbul/ve": "^0.6.0",
+    "@fimbul/wotan": "^0.8.0",
     "@types/node": "^10.0.4",
     "babel-eslint": "^8.2.1",
     "eslint": "^4.15.0",

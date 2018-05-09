@@ -1,0 +1,26 @@
+extends: wotan:recommanded
+
+rules:
+  syntaxcheck: error
+  typecheck: error
+
+include:
+  - "**/*.js"
+  - "**/*.ts"
+  - "**/*.vue"
+
+exclude:
+  - "node_modules/**"
+  - ".nuxt/**"
+  - "dist/**"
+  - "nuxt.config.js"
+  - "**/*.d.ts"
+
+project: tsconfig.lint.json
+
+# Vue lints.
+modules: "@fimbul/valtyr"
+valtyr:
+  overrides:
+    - files: "*.vue"
+      processor: "@fimbul/ve"
