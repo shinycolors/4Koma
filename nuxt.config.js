@@ -43,7 +43,7 @@ module.exports = {
   build: {
     /*
     ** Run ESLint on save
-    */
+    ** Disabled due to babel-eslint doesn't support Typescript.
     extend(config, { isDev, isClient }) {
       if (isDev && isClient) {
         config.module.rules.push({
@@ -54,5 +54,6 @@ module.exports = {
         });
       }
     }
+    */
   }
 };
