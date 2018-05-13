@@ -455,6 +455,25 @@
             "https://twitter.com/ShinyColors_ENG/status/988754090699051009"
         }
       }
+    },
+    {
+      "id": 24,
+      "lang": {
+        "ja": {
+          "exist": true,
+          "lang": "Japanese",
+          "img_src": "https://pbs.twimg.com/media/Dco_FZ5U8AEDFM9.jpg:orig",
+          "links":
+            "https://twitter.com/imassc_official/status/995498870204485634"
+        },
+        "en": {
+          "exist": true,
+          "lang": "English",
+          "img_src": "https://pbs.twimg.com/media/DdDAY_1UwAAljNV.jpg:orig",
+          "links":
+            "https://twitter.com/ShinyColors_ENG/status/995507505923964928"
+        }
+      }
     }
   ]
 }
